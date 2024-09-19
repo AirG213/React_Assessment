@@ -19,6 +19,14 @@ function App() {
     }
   };
 
+  // State to manage the number of posts visible
+  const [visiblePosts, setVisiblePosts] = useState(5);
+
+  // Function to load more posts
+  const loadMore = () => {
+    setVisiblePosts((prevVisible) => prevVisible + 5);
+  };
+
 // useEffect to fetch posts from API and set posts and loading state
   useEffect(() => {
     // Make a request to the API to retrieve data from posts
@@ -96,18 +104,17 @@ function App() {
         {loading ? (
           <p>Loading posts...</p>
         ) : (
-          filteredPosts.length > 0 ? (
-            filteredPosts.map((data) => (
-              <li key={data.id}>
-                <h2>{data.title}</h2>
-                {data.author && <p>{data.author.name}</p>}
-              </li>
-            ))
-          ) : (
-            <p>No posts available</p>
-          )
+          filteredPosts.slice(0, visiblePosts).map((data) => (
+            <li key={data.id}>
+              <h2>{data.title}</h2>
+              {data.author && <p>{data.author.name}</p>}
+            </li>
+          ))
         )}
       </ul>
+      {visiblePosts < filteredPosts.length && (
+        <button onClick={loadMore}>Load More</button>
+      )}
     </div>
   );
 }

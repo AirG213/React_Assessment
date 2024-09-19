@@ -44,19 +44,22 @@ function App() {
         console.log(json); 
         // Update status with data from retrieved posts
         setPosts(json.posts);
-        setLoading(false); // Set loading to false once data is fetched
+        // Set loading to false once data is fetched
+        setLoading(false); 
       })
       .catch((error) => {
         // Manage errors during the query
         console.error("Error : ", error);
-        setLoading(false); // Set loading to false even if there's an error
+        // Set loading to false even if there's an error
+        setLoading(false);
       });
   }, []); 
 
   // useEffect to filter posts based on selected categories and update filteredPosts
   useEffect(() => {
     if (selectedCategories.length === 0) {
-      setFilteredPosts(posts); // Show all posts if no category is selected
+      // Show all posts if no category is selected
+      setFilteredPosts(posts); 
     } else {
       const filtered = posts.filter((post) =>
         post.categories.some((category) =>
@@ -65,16 +68,20 @@ function App() {
       );
       setFilteredPosts(filtered);
     }
-  }, [selectedCategories, posts]); // Trigger this effect when selectedCategories or posts change
+  // Trigger this effect when selectedCategories or posts change  
+  }, [selectedCategories, posts]); 
 
   console.log(filteredPosts);
   // Log post data to check content in console
   console.log(posts);
 
   return (
-    <div>
-      <div>
-        <label>Filter by Category:</label>
+    <main>
+      <header>
+        <h1>Blog Posts</h1>
+      </header>
+      <section>
+        <h2>Filter by Category:</h2>
         {posts.length > 0 && (
           <>
             {Array.from(
@@ -99,24 +106,35 @@ function App() {
             ))}
           </>
         )}
-      </div>
-      <ul>
-        {loading ? (
-          <p>Loading posts...</p>
-        ) : (
-          filteredPosts.slice(0, visiblePosts).map((data) => (
-            <li key={data.id}>
-              <h2>{data.title}</h2>
-              {data.author && <p>{data.author.name}</p>}
-            </li>
-          ))
+      </section>
+      <section>
+        <ul>
+          {loading ? (
+            <p>Loading posts...</p>
+          ) : (
+            filteredPosts.slice(0, visiblePosts).map((data) => (
+              <li key={data.id}>
+                <article>
+                  <header>
+                    <h2>{data.title}</h2>
+                    {data.author && <p>{data.author.name}</p>}
+                  </header>
+                  <p>{data.summary}</p> {/* Optional: Add more properties based on your data */}
+                </article>
+              </li>
+            ))
+          )}
+        </ul>
+        {visiblePosts < filteredPosts.length && (
+          <button onClick={loadMore}>Load More</button>
         )}
-      </ul>
-      {visiblePosts < filteredPosts.length && (
-        <button onClick={loadMore}>Load More</button>
-      )}
-    </div>
+      </section>
+      <footer>
+      <p>Created by Rayan Gouadfel. Check out my work on <a href="https://github.com/AirG213/React_Assessment" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+      </footer>
+    </main>
   );
+  
 }
 
 export default App;

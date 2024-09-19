@@ -38,5 +38,11 @@ In order to run the provided solution the following software will need to be ins
    - Added state variables for `selectedCategories` and `filteredPosts`. Implemented filtering logic in a new `useEffect` hook to filter posts based on selected categories. The `handleCategoryChange` function updates the selected categories based on user input from the filter UI. The filtering effect updates the `filteredPosts` state to only include posts that match the selected categories.
    - Category Filter UI : Implemented a category filter UI that displays a list of checkboxes corresponding to the categories of the posts. Users can select or deselect categories to filter the posts. The UI updates dynamically based on the categories available in the fetched data.
 
+4. **Pagination Implementation**
+   - Added "Load More" functionality to the posts list. Introduced a state variable `visiblePosts` to manage the number of posts displayed at a time. Added a `loadMore` function to incrementally show more posts. Updated the `return` statement to include a button for loading more posts, which only appears when there are more posts to display.
+
+5. **Semantic Markup**
+   - Replaced generic `<div>` and `<label>` elements with semantic HTML5 elements such as `<header>`, `<main>`, `<section>`, `<article>`, and `<footer>`. Updated the structure to improve accessibility, and provided a more meaningful structure to the markup.
+
 # Authors 
 * **GOUADFEL Rayan** _alias_ [@AirG213](https://github.com/AirG213)

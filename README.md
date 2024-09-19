@@ -47,5 +47,13 @@ In order to run the provided solution the following software will need to be ins
 6. **Responsive Layout** 
    - Created a responsive layout for the blog page using HTML and CSS. The content, including titles, authors, and summaries, is now centered, and the layout adapts to different screen sizes. Added media queries to adjust the padding, font sizes, and button widths for smaller screens.
 
+### Additional features
+
+1. Implemented post detail pages with dynamic routing
+   - Added route for individual post details.
+   - Created PostDetail component to display post information.
+   - Integrated Header and Footer into PostDetail and MainPage.
+   - Updated routing configuration to handle dynamic post detail pages.
+
 # Authors 
 * **GOUADFEL Rayan** _alias_ [@AirG213](https://github.com/AirG213)

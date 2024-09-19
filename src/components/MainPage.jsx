@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './css/MainPage.css'; // Import CSS specific to MainPage
+import '../styles/MainPage.css'; // Import CSS specific to MainPage
 import Header from './Header';
 import PostList from './PostList';
 import CategoryFilter from './CategoryFilter';
@@ -66,31 +66,33 @@ function MainPage() {
   }, [selectedCategories, posts]); // Dependency array includes selectedCategories and posts
 
   return (
-    <main className="container">
-      {/* Render Header component */}
+    <div className="page-container">
       <Header />
-      <section>
-        <h2>Filter by Category:</h2>
-        {/* Render CategoryFilter component */}
-        <CategoryFilter
-          posts={posts}
-          selectedCategories={selectedCategories}
-          onCategoryChange={handleCategoryChange}
-        />
-      </section>
-      <section>
-        {/* Render PostList component */}
-        <PostList posts={filteredPosts} loading={loading} visiblePosts={visiblePosts} />
-        {/* Render LoadMoreButton component */}
-        <LoadMoreButton
-          visiblePosts={visiblePosts}
-          filteredPosts={filteredPosts}
-          onLoadMore={loadMore}
-        />
-      </section>
-      {/* Render Footer component */}
-      <Footer />
-    </main>
+      <main className="container">
+        {/* Render Header component */}
+        <section>
+          <h2>Filter by Category:</h2>
+          {/* Render CategoryFilter component */}
+          <CategoryFilter
+            posts={posts}
+            selectedCategories={selectedCategories}
+            onCategoryChange={handleCategoryChange}
+          />
+        </section>
+        <section>
+          {/* Render PostList component */}
+          <PostList posts={filteredPosts} loading={loading} visiblePosts={visiblePosts} />
+          {/* Render LoadMoreButton component */}
+          <LoadMoreButton
+            visiblePosts={visiblePosts}
+            filteredPosts={filteredPosts}
+            onLoadMore={loadMore}
+          />
+        </section>
+        {/* Render Footer component */}
+        <Footer />
+      </main>
+      </div>
   );
 }
 

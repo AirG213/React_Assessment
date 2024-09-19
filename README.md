@@ -44,7 +44,8 @@ In order to run the provided solution the following software will need to be ins
 5. **Semantic Markup**
    - Replaced generic `<div>` and `<label>` elements with semantic HTML5 elements such as `<header>`, `<main>`, `<section>`, `<article>`, and `<footer>`. Updated the structure to improve accessibility, and provided a more meaningful structure to the markup.
 
-6. Created a responsive layout for the blog page using HTML and CSS. The content, including titles, authors, and summaries, is now centered, and the layout adapts to different screen sizes. Added media queries to adjust the padding, font sizes, and button widths for smaller screens.
+6. **Responsive Layout** 
+   - Created a responsive layout for the blog page using HTML and CSS. The content, including titles, authors, and summaries, is now centered, and the layout adapts to different screen sizes. Added media queries to adjust the padding, font sizes, and button widths for smaller screens.
 
 # Authors 
 * **GOUADFEL Rayan** _alias_ [@AirG213](https://github.com/AirG213)

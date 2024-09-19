@@ -1,0 +1,62 @@
+/* Style for the PostDetail page */
+
+/* Ensure the container takes full height */
+.post-detail-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fa;
+  }
+  
+  /* Styling the post content like a tweet */
+  .post-detail-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  /* Mimic the Twitter post style */
+  .post-detail-content .author {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1da1f2;
+  }
+  
+  .post-detail-content .content {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .post-detail-content .timestamp {
+    color: #657786;
+    font-size: 14px;
+  }
+  
+  .post-detail-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    background-color: #f5f8fa;
+    padding: 20px;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #353f4a;
+    color: white;
+    width: 100%;
+  }
+  

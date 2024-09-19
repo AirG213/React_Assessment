@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link component from react-router-dom
 
 // Component to display a list of posts
 function PostList({ posts, loading, visiblePosts }) {
@@ -12,7 +12,9 @@ function PostList({ posts, loading, visiblePosts }) {
           <li key={data.id}>
             <article>
               <header>
-                <h2>{data.title}</h2>
+                <h2>
+                  <Link to={`/post/${data.id}`}>{data.title}</Link> {/* Add link to post details */}
+                </h2>
                 {/* Conditionally render author name if available */}
                 {data.author && <p>{data.author.name}</p>}
               </header>

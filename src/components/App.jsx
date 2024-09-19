@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './App.css';
 
 function App() {
 // State declaration to store posts, loading state, selected categories, and filtered posts
@@ -76,9 +77,9 @@ function App() {
   console.log(posts);
 
   return (
-    <main>
+    <main className="container">
       <header>
-        <h1>Blog Posts</h1>
+        <h1>Lizard Global Assessment</h1>
       </header>
       <section>
         <h2>Filter by Category:</h2>
@@ -125,16 +126,17 @@ function App() {
             ))
           )}
         </ul>
-        {visiblePosts < filteredPosts.length && (
-          <button onClick={loadMore}>Load More</button>
-        )}
+        <div className="load-more-container">
+          {visiblePosts < filteredPosts.length && (
+            <button onClick={loadMore}>Load More</button>
+          )}
+        </div>
       </section>
       <footer>
-      <p>Created by Rayan Gouadfel. Check out my work on <a href="https://github.com/AirG213/React_Assessment" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+        <p>Created by Rayan Gouadfel. Check out my work on <a href="https://github.com/AirG213/React_Assessment" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
       </footer>
     </main>
-  );
-  
+  );  
 }
 
 export default App;

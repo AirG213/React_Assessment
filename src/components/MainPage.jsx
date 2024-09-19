@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './css/MainPage.css'; // Import CSS specific to MainPage
+import '../styles/MainPage.css'; // Import CSS specific to MainPage
 import Header from './Header';
 import PostList from './PostList';
 import CategoryFilter from './CategoryFilter';

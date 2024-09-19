@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/Header.css'; // Add CSS for header styling
+import '../styles/Header.css'; // Add CSS for header styling
 
 // Header component to display the page title and subtitle
 function Header() {

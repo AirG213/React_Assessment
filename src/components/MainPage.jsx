@@ -6,6 +6,9 @@ import CategoryFilter from './CategoryFilter';
 import LoadMoreButton from './LoadMoreButton';
 import Footer from './Footer';
 
+// Import useLocation
+import { useLocation } from 'react-router-dom'; 
+
 // MainPage component
 function MainPage() {
   // State to store posts, loading state, selected categories, and filtered posts
@@ -32,6 +35,26 @@ function MainPage() {
     setVisiblePosts((prevVisible) => prevVisible + 5);
   };
 
+  // Get the location object
+  const location = useLocation(); 
+
+  const parseQuery = (query) => {
+    const params = new URLSearchParams(query);
+    // Get all categories
+    const categories = params.getAll('categories');
+
+    // Only update the state if it's different from the current state
+    if (categories.length > 0 && categories.toString() !== selectedCategories.toString()) {
+      setSelectedCategories(categories);
+    }
+  };
+
+  useEffect(() => {
+    /* eslint-disable react-hooks/exhaustive-deps */
+    // Parse the query string from the URL
+    parseQuery(location.search); 
+  }, [location.search]);
+  
   // useEffect to fetch posts from API
   useEffect(() => {
     fetch('/api/posts')

@@ -26,6 +26,27 @@ In order to run the provided solution the following software will need to be ins
 2. Open the repository folder and install the dependencies using `yarn` or `npm install`.
 3. Run the development server using `yarn start` or `npm start`.
 
+### Requirements
+
+These are the minimum requirements for the exercies:
+
+1. Retrieve the data from the mock API.
+2. Output the data in a list, including properties from the data that are appropriate for a list view.
+3. Implement a category filter - this can be single or multi-select.
+4. Implement pagination - this can be traditional numbered pages or "load more".
+5. Use semantic markup where possible.
+6. Create a responsive layout with HTML and CSS.
+
+### Additional Exercises
+
+If you have time then demonstrating any of the following would be considered as a bonus:
+
+1. Use client-side routing to create a "detail" page.
+2. Persist filter state in the query string.
+3. Include animated transitions between application state, e.g. when filtering.
+4. Convert the application to use TypeScript instead of JavaScript.
+5. Use a CSS preprocessor or CSS-in-JS rather than plain CSS.
+
 ### Changes Made
 
 1. **Data Fetching and Loading State**
@@ -52,8 +73,12 @@ In order to run the provided solution the following software will need to be ins
 1. Implemented post detail pages with dynamic routing
    - Added route for individual post details.
    - Created PostDetail component to display post information.
-   - Integrated Header and Footer into PostDetail and MainPage.
    - Updated routing configuration to handle dynamic post detail pages.
+
+2. Persist filter state in the query string
+   - Enhanced the CategoryFilter component to maintain selected categories in the URL.
+   - Implemented a mechanism to ensure the query string updates dynamically when categories are selected or deselected.
+   - This allows users to bookmark or share the filtered view easily, and resolves issues with stale query parameters on refresh.
 
 # Authors 
 * **GOUADFEL Rayan** _alias_ [@AirG213](https://github.com/AirG213)

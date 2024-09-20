@@ -1,0 +1,16 @@
+/* Fade-in and fade-out transition */
+.fade-enter {
+    opacity: 0; /* Start invisible */
+  }
+  .fade-enter-active {
+    opacity: 1; /* Fade to visible */
+    transition: opacity 500ms ease-in-out; /* Smooth transition */
+  }
+  .fade-exit {
+    opacity: 1; /* Start visible */
+  }
+  .fade-exit-active {
+    opacity: 0; /* Fade to invisible */
+    transition: opacity 500ms ease-in-out; /* Smooth transition */
+  }
+  

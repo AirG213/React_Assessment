@@ -11,22 +11,31 @@ function CategoryFilter({ posts, selectedCategories, onCategoryChange }) {
   // Hook to get the current location
   const location = useLocation(); 
 
-  // Effect to update query string when selected categories change
-  useEffect(() => {
+// Effect to update query string when selected categories change
+useEffect(() => {
     // Get current query params
-    const queryParams = new URLSearchParams(location.search); 
+  const queryParams = new URLSearchParams(location.search);
     // Remove existing categories
-    queryParams.delete('categories'); 
+  queryParams.delete('categories');
 
-    // Add selected categories to the query string
+  // Add the selected categories to queryParams
+  if (selectedCategories.length > 0) {
     selectedCategories.forEach((category) => {
       queryParams.append('categories', category);
     });
+  }
 
-    // Update the URL without refreshing the page
-    navigate({ search: queryParams.toString() });
-    // Dependencies include selectedCategories and location
-  }, [selectedCategories, navigate, location.search]); 
+  // Avoid updating the URL if the current URL is already correct
+  const newQueryString = queryParams.toString();
+  const currentQueryString = location.search.substring(1); // Remove the "?" from location.search
+
+  if (newQueryString !== currentQueryString) {
+    // Update the URL without reloading the page
+    navigate(`${location.pathname}?${newQueryString}`, { replace: true });
+  }
+}, [selectedCategories, navigate, location]);
+
+
   return (
     <>
       {/* Conditionally render category checkboxes if posts are available */}

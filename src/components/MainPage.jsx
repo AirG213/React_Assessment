@@ -42,10 +42,15 @@ function MainPage() {
     const params = new URLSearchParams(query);
     // Get all categories
     const categories = params.getAll('categories');
-    setSelectedCategories(categories);
+
+    // Only update the state if it's different from the current state
+    if (categories.length > 0 && categories.toString() !== selectedCategories.toString()) {
+      setSelectedCategories(categories);
+    }
   };
-  
+
   useEffect(() => {
+    /* eslint-disable react-hooks/exhaustive-deps */
     // Parse the query string from the URL
     parseQuery(location.search); 
   }, [location.search]);

@@ -77,8 +77,8 @@ If you have time then demonstrating any of the following would be considered as 
 
 2. Persist filter state in the query string
    - Enhanced the CategoryFilter component to maintain selected categories in the URL.
-   - When categories are selected or deselected, the query string is updated dynamically.
-   - This allows users to bookmark or share the filtered view easily.
+   - Implemented a mechanism to ensure the query string updates dynamically when categories are selected or deselected.
+   - This allows users to bookmark or share the filtered view easily, and resolves issues with stale query parameters on refresh.
 
 # Authors 
 * **GOUADFEL Rayan** _alias_ [@AirG213](https://github.com/AirG213)

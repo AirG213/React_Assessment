@@ -24,7 +24,9 @@ In order to run the provided solution the following software will need to be ins
 
 1. Fork and clone the repository
 2. Open the repository folder and install the dependencies using `yarn` or `npm install`.
-3. Run the development server using `yarn start` or `npm start`.
+3. Install required libraries: `react-router-dom` and `react-transition-group`
+   - Run `yarn add react-router-dom react-transition-group` or `npm install react-router-dom react-transition-group`
+4. Run the development server using `yarn start` or `npm start`.
 
 ### Requirements
 
@@ -79,6 +81,10 @@ If you have time then demonstrating any of the following would be considered as 
    - Enhanced the CategoryFilter component to maintain selected categories in the URL.
    - Implemented a mechanism to ensure the query string updates dynamically when categories are selected or deselected.
    - This allows users to bookmark or share the filtered view easily, and resolves issues with stale query parameters on refresh.
+
+3. Included animated transitions for state changes, such as filtering posts.
+   - Added `react-transition-group` to smoothly animate the post filtering process.
+   - The animation enhances user experience by providing visual feedback during state transitions.
 
 # Authors 
 * **GOUADFEL Rayan** _alias_ [@AirG213](https://github.com/AirG213)

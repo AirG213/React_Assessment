@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
-import "../styles/PostDetail.css";
+import "../styles/PostDetail.scss";
 import { Post } from '../mock/types';
 
 function PostDetail() {
@@ -51,7 +51,7 @@ function PostDetail() {
       <main className="main-content">
         {/* Render post details if available */}
         {post && (
-          <article>
+        <article className="post-detail-content"> 
             <h1>{post.title}</h1>
             <p>{post.summary}</p>
             <p>Author: {post.author?.name}</p>

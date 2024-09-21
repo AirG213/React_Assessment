@@ -1,0 +1,24 @@
+.app-header {
+  background: linear-gradient(45deg, #4a86d5, #22eba3); /* Gradient from blue to green */
+  color: white; /* Text color for header */
+  text-align: center; /* Center-align text in header */
+  padding: 25px; /* Padding around the header */
+}
+
+.app-title a:hover {
+  text-decoration: underline; /* Underline on hover for the title link */
+}
+
+.app-title {
+  font-size: 2.5em; /* Size of the main title */
+  font-weight: bold; /* Bold title */
+}
+
+.header-content a {
+  color: #4a86d5; /* Link color in header */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.app-subtitle {
+  font-size: 1.3em; /* Size of the subtitle */
+}

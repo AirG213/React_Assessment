@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'; 
 // Import for animations
 import { CSSTransition, TransitionGroup } from 'react-transition-group'; 
-import '../styles/PostList.css'; 
+import '../styles/PostList.scss'; 
 
 // Interface for typing post data
 interface Post {

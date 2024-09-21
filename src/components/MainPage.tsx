@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/MainPage.css'; 
+import '../styles/MainPage.scss'; 
 import Header from './Header';
 import PostList from './PostList';
 import CategoryFilter from './CategoryFilter';
@@ -115,11 +115,11 @@ function MainPage() {
             onLoadMore={loadMore}
           />
         </section>
-        {/* Render Footer component */}
-        <Footer />
       </main>
-      </div>
-  );
+      {/* Render Footer component outside of main */}
+      <Footer />
+    </div>
+  );  
 }
 
 export default MainPage;

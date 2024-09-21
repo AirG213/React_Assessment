@@ -1,8 +1,8 @@
 import React from 'react';
-import '../styles/Footer.css'; // Add CSS for footer styling
+import '../styles/Footer.css'; 
 
 // Footer component to display creator information and a link
-function Footer() {
+const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <p className="footer-content">

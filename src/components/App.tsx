@@ -1,18 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import MainPage from './MainPage'; // Import MainPage component
-import PostDetail from './PostDetail'; // Import PostDetail component
+import MainPage from './MainPage'; 
+import PostDetail from './PostDetail'; 
 
 // App component to handle routing
-function App() {
+const App: React.FC = () => {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/post/:id" element={<PostDetail />} /> {/* Route for post details */}
+        <Route path="/post/:id" element={<PostDetail />} />
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;

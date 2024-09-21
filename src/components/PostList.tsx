@@ -1,9 +1,27 @@
-import { Link } from 'react-router-dom'; // Import Link component from react-router-dom
-import { CSSTransition, TransitionGroup } from 'react-transition-group'; // Import for animations
+import { Link } from 'react-router-dom'; 
+// Import for animations
+import { CSSTransition, TransitionGroup } from 'react-transition-group'; 
 import '../styles/PostList.css'; 
 
+// Interface for typing post data
+interface Post {
+  id: number;
+  title: string;
+  summary: string;
+  author?: {
+    name: string;
+  };
+}
+
+// Interface to type component props
+interface PostListProps {
+  posts: Post[];
+  loading: boolean;
+  visiblePosts: number;
+}
+
 // Component to display a list of posts
-function PostList({ posts, loading, visiblePosts }) {
+const PostList: React.FC<PostListProps> = ({ posts, loading, visiblePosts }) => {
   return (
     <ul>
       {/* If loading is true, show loading text */}
@@ -35,6 +53,6 @@ function PostList({ posts, loading, visiblePosts }) {
       )}
     </ul>
   );
-}
+};
 
 export default PostList;

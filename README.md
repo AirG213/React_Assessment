@@ -86,5 +86,11 @@ If you have time then demonstrating any of the following would be considered as 
    - Added `react-transition-group` to smoothly animate the post filtering process.
    - The animation enhances user experience by providing visual feedback during state transitions.
 
+4. Converted the application to use TypeScript instead of JavaScript. This involved:
+  - Renaming files from `.js` to `.tsx` where necessary.
+  - Installing TypeScript and the necessary type definitions for React and React Router.
+  - Defining interfaces for components and props to ensure type safety.
+  - Updating components to utilize the new types and handle potential undefined properties.
+
 # Authors 
 * **GOUADFEL Rayan** _alias_ [@AirG213](https://github.com/AirG213)

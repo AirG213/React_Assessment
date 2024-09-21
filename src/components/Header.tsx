@@ -1,9 +1,9 @@
 import React from 'react';
-import '../styles/Header.css'; // Add CSS for header styling
+import '../styles/Header.css'; 
 import { Link } from 'react-router-dom';
 
 // Header component to display the page title and subtitle
-function Header() {
+const Header: React.FC = () => {
   return (
     <header className="app-header">
       <Link to="/" className="app-title-link">

@@ -50,8 +50,7 @@ If you prefer not to build the image yourself, you can download it directly from
    - `docker pull airg213/lizardglobal_assessment`
 
 2. Run the Docker container:
-   - `docker run -it --name lizardglobal_assessment airg213/lizardglobal_assessment`
-
+   - `docker run -p 8080:8080 -it --name lizardglobal_assessment airg213/lizardglobal_assessment`
 
 #### Notes
 - After running the container, you can access the application at http://localhost:8080.

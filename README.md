@@ -24,8 +24,8 @@ In order to run the provided solution the following software will need to be ins
 
 1. Fork and clone the repository
 2. Open the repository folder and install the dependencies using `yarn` or `npm install`.
-3. Install required libraries: `react-router-dom` and `react-transition-group`
-   - Run `yarn add react-router-dom react-transition-group` or `npm install react-router-dom react-transition-group`
+3. Install required libraries: `react-router-dom` and `react-transition-group`, and `node-sass` for SCSS support.
+   - Run `yarn add react-router-dom react-transition-group node-sass` or `npm install react-router-dom react-transition-group node-sass`
 4. Run the development server using `yarn start` or `npm start`.
 
 ### Requirements
@@ -91,6 +91,12 @@ If you have time then demonstrating any of the following would be considered as 
   - Installing TypeScript and the necessary type definitions for React and React Router.
   - Defining interfaces for components and props to ensure type safety.
   - Updating components to utilize the new types and handle potential undefined properties.
+
+5. Implemented SCSS for styling improvements.
+   - Converted all CSS files to SCSS format to leverage the features of a CSS preprocessor.
+   - Organized styles using variables, nesting, and mixins for better maintainability and readability.
+   - Enhanced the aesthetic of the application by applying a modern gradient background to the header and footer.
+   - Centered and adjusted text sizes for better visual hierarchy and user experience.
 
 # Authors 
 * **GOUADFEL Rayan** _alias_ [@AirG213](https://github.com/AirG213)

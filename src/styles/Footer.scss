@@ -1,0 +1,43 @@
+.footer {
+  background: linear-gradient(45deg, #22eba3, #4a86d5); /* Gradient from green to blue */
+  color: white; /* Text color for footer */
+  text-align: center; /* Center-align text in footer */
+  padding: 25px; /* Padding around the footer */
+  font-size: 1.1em; /* Increased font size */
+  width: 100%; /* Full width */
+  position: relative; /* Positioning context */
+}
+
+.footer-title {
+  margin: 0; /* Remove default margin */
+  font-size: 1.8em; /* Slightly larger title for emphasis */
+  font-weight: bold; /* Bold title */
+}
+
+.footer-content {
+  margin: 10px 0 0; /* Margin for content */
+  font-size: 1.1em; /* Increased font size for content */
+}
+
+.footer-content a {
+  color: #4a86d5; /* Link color in footer */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.footer-content a:hover {
+  text-decoration: underline; /* Underline on hover for links */
+}
+
+.contact-icon {
+  width: 50px; /* Size of the contact icons */
+  height: 50px; /* Size of the contact icons */
+  margin: 5px; /* Space around icons */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.mail-icon {
+  width: 50px; /* Size of the mail icon */
+  height: 50px; /* Size of the mail icon */
+  margin: 5px; /* Space around the mail icon */
+  cursor: pointer; /* Pointer cursor on hover */
+}

@@ -1,30 +1,71 @@
 .page-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh; /* Ensure full page height */
 }
 
 .main-content {
-  flex: 1; 
+  flex: 1;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center; /* Center the content */
 }
 
 .post-detail-content {
   max-width: 800px;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #f4f4f9; 
+  border: 2px solid #22eba3; /* Green border for the post container */
   border-radius: 8px;
-  text-align: center; 
+  text-align: left; /* Align text to the left */
 }
 
-h1 {
+/* Styling for the post header */
+.post-header {
+  display: flex;
+  justify-content: space-between; /* Separate author and date */
+  margin-bottom: 15px;
+  font-size: 0.9rem; /* Smaller font for the header */
+  color: #363737; /* Grey color for the header text */
+}
+
+/* Styling for the post title */
+.post-title {
   font-size: 2rem;
   margin-bottom: 15px;
+  color: #363737; /* Darker color for the title */
 }
 
-p {
+/* Styling for the post content/summary */
+.post-content {
   font-size: 1.2rem;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  line-height: 1.6; /* Increase line height for better readability */
+}
+
+/* Styling for the post categories */
+.post-categories {
+  display: flex;
+  flex-wrap: wrap; /* Allow categories to wrap to the next line */
+  gap: 10px; /* Add space between categories */
+}
+
+.category-tag {
+  background-color: #e0f7fa; /* Light blue background for category tags */
+  color: #00796b; /* Darker text color for categories */
+  padding: 5px 10px; /* Padding for category tags */
+  border-radius: 5px; /* Rounded corners for the tags */
+  border: 1px solid #00796b; /* Border for each category */
+  font-size: 0.9rem; /* Smaller font size for categories */
+}
+
+/* Styling for the links in category tags */
+.category-tag a {
+  color: #00796b; /* Keep the link color the same as the tag text color */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Add underline on hover */
+.category-tag a:hover {
+  text-decoration: underline; /* Underline on hover */
 }

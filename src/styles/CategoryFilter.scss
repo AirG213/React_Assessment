@@ -1,0 +1,44 @@
+.category-filter {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center the items horizontally */
+    gap: 15px; /* Space between filter title and category container */
+
+    border: 1px solid #4a86d5; /* Border for the filter container */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Inner padding */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: box-shadow 0.3s; /* Smooth shadow change on hover */
+    
+    &:hover {
+      box-shadow: 0 0 10px rgba(34, 235, 163, 0.5); /* Add shadow on hover */
+    }
+}
+
+.filter-title {
+    font-size: 24px; 
+    color: #4a86d5; /* Change title color */
+    font-weight: bold; /* Make the title bold */
+}
+
+.category-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow categories to wrap */
+    justify-content: center; /* Center categories */
+    gap: 10px; /* Space between categories */
+}
+
+.category-checkbox {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid #22eba3; /* Border for each category */
+    border-radius: 10px; /* Rounded corners */
+    background-color: white; /* Default background color */
+    cursor: pointer; /* Pointer cursor for hover effect */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+    font-size: 12px; 
+    &.selected {
+        background-color: #22eba3; /* Selected background color */
+    }
+}

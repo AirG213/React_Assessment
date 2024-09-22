@@ -102,7 +102,6 @@ function MainPage() {
       <main className="container">
         {/* Render Header component */}
         <section>
-          <h2>Filter by Category:</h2>
           {/* Render CategoryFilter component */}
           <CategoryFilter
             posts={posts}

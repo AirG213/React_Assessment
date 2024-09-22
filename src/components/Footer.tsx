@@ -19,8 +19,7 @@ const Footer: React.FC = () => {
           <img src={`${process.env.PUBLIC_URL}/github-logo.png`} alt="GitHub" className="contact-icon" />
         </a>
       </div>
-      <p>Created by Rayan Gouadfel. Terms & Conditions</p>
-      <p>©2024. All rights reserved.</p>
+      <p>Created by Rayan Gouadfel. Terms & Conditions. ©2024. All rights reserved.</p>
     </footer>
   );
 };

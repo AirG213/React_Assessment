@@ -11,10 +11,16 @@ interface CategoryFilterProps {
   posts: Post[];
   selectedCategories: string[];
   onCategoryChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onResetVisiblePosts: () => void; // Add a prop for resetting visible posts
 }
 
 // Component to filter posts by selected categories
-const CategoryFilter: React.FC<CategoryFilterProps> = ({ posts, selectedCategories, onCategoryChange }) => {
+const CategoryFilter: React.FC<CategoryFilterProps> = ({
+  posts,
+  selectedCategories,
+  onCategoryChange,
+  onResetVisiblePosts, // Include the reset function
+}) => {
   // Hook to programmatically navigate
   const navigate = useNavigate();
   // Hook to get the current location
@@ -41,8 +47,9 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({ posts, selectedCategori
     if (newQueryString !== currentQueryString) {
       // Update the URL without reloading the page
       navigate(`${location.pathname}?${newQueryString}`, { replace: true });
+      onResetVisiblePosts(); // Reset visible posts when filters change
     }
-  }, [selectedCategories, navigate, location]);
+  }, [selectedCategories, navigate, location, onResetVisiblePosts]); // Include onResetVisiblePosts in dependencies
 
   return (
     <>
@@ -74,6 +81,6 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({ posts, selectedCategori
       )}
     </>
   );
-}
+};
 
 export default CategoryFilter;

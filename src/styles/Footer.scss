@@ -2,10 +2,12 @@
   background: linear-gradient(45deg, #22eba3, #4a86d5); /* Gradient from green to blue */
   color: white; /* Text color for footer */
   text-align: center; /* Center-align text in footer */
-  padding: 25px; /* Padding around the footer */
+  padding: 5px; /* Padding around the footer */
   font-size: 1.1em; /* Increased font size */
   width: 100%; /* Full width */
+  border-radius: 20px; 
   position: relative; /* Positioning context */
+  box-sizing: border-box; 
 }
 
 .footer-title {

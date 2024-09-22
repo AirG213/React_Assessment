@@ -2,7 +2,8 @@
   background: linear-gradient(45deg, #4a86d5, #22eba3); /* Gradient from blue to green */
   color: white; /* Text color for header */
   text-align: center; /* Center-align text in header */
-  padding: 25px; /* Padding around the header */
+  padding: 10px; /* Padding around the header */
+  border-radius: 20px; 
 }
 
 .app-title a:hover {

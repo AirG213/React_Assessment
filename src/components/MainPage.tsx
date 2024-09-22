@@ -10,7 +10,6 @@ import { Post } from '../mock/types';
 // Import useLocation
 import { useLocation } from 'react-router-dom'; 
 
-
 // MainPage component
 function MainPage() {
   // State to store posts, loading state, selected categories, and filtered posts
@@ -32,6 +31,11 @@ function MainPage() {
     }
   };
 
+  // Function to reset visible posts
+  const handleResetVisiblePosts = () => {
+    setVisiblePosts(5); // Reset to initial number of posts
+  };
+
   // Function to load more posts
   const loadMore = () => {
     setVisiblePosts((prevVisible) => prevVisible + 5);
@@ -48,6 +52,7 @@ function MainPage() {
     // Only update the state if it's different from the current state
     if (categories.length > 0 && categories.toString() !== selectedCategories.toString()) {
       setSelectedCategories(categories);
+      handleResetVisiblePosts(); // Reset visible posts when categories change
     }
   };
 
@@ -103,6 +108,7 @@ function MainPage() {
             posts={posts}
             selectedCategories={selectedCategories}
             onCategoryChange={handleCategoryChange}
+            onResetVisiblePosts={handleResetVisiblePosts} // Add the reset function
           />
         </section>
         <section>

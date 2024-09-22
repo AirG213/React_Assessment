@@ -1,16 +1,64 @@
+.post-list {
+  list-style-type: none; /* Remove bullet points from the list */
+  padding: 0;
+}
+
+.post-item {
+  margin-bottom: 20px; /* Space between posts */
+}
+
+.post-link {
+  text-decoration: none; /* Remove underline from the link */
+  color: inherit; /* Keep the text color inherited */
+}
+
+.post-card {
+  background-color: #f4f4f9; /* Light background for the card */
+  border-radius: 12px; /* Rounded corners */
+  padding: 15px; /* Space inside the post */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+  margin: 10px 0; /* Add space between cards */
+  border: 1px solid #23e39d; /* Add a subtle border */
+
+  &:hover {
+    transform: translateY(-5px); /* Slightly lift the post on hover */
+  }
+}
+
+.post-author {
+  font-size: 0.9em; /* Smaller font for the author */
+  font-weight: bold; /* Bold author name */
+  color: #363737; /* Dark color for the author */
+}
+
+.post-title {
+  font-size: 1.5em; /* Larger title font */
+  font-weight: bold; /* Bold title */
+  background: linear-gradient(45deg, #5c5beb, #23e39d, #363737); /* Gradient for the title */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+  margin: 5px 0; /* Space between the author and title */
+}
+
+.post-summary {
+  font-size: 1em; /* Normal font size for the summary */
+  color: #6c6c6c; /* Slightly lighter color for the summary */
+  margin-top: 10px; /* Space between the title and summary */
+}
+
 /* Fade-in and fade-out transition */
 .fade-enter {
-    opacity: 0; /* Start invisible */
-  }
-  .fade-enter-active {
-    opacity: 1; /* Fade to visible */
-    transition: opacity 500ms ease-in-out; /* Smooth transition */
-  }
-  .fade-exit {
-    opacity: 1; /* Start visible */
-  }
-  .fade-exit-active {
-    opacity: 0; /* Fade to invisible */
-    transition: opacity 500ms ease-in-out; /* Smooth transition */
-  }
-  
+  opacity: 0; /* Start invisible */
+}
+.fade-enter-active {
+  opacity: 1; /* Fade to visible */
+  transition: opacity 500ms ease-in-out; /* Smooth transition */
+}
+.fade-exit {
+  opacity: 1; /* Start visible */
+}
+.fade-exit-active {
+  opacity: 0; /* Fade to invisible */
+  transition: opacity 500ms ease-in-out; /* Smooth transition */
+}

@@ -23,7 +23,7 @@ interface PostListProps {
 // Component to display a list of posts
 const PostList: React.FC<PostListProps> = ({ posts, loading, visiblePosts }) => {
   return (
-    <ul>
+    <ul className="post-list">
       {/* If loading is true, show loading text */}
       {loading ? (
         <p>Loading posts...</p>
@@ -33,19 +33,19 @@ const PostList: React.FC<PostListProps> = ({ posts, loading, visiblePosts }) => 
           {posts.slice(0, visiblePosts).map((data) => (
             // Add CSSTransition for each post to animate
             <CSSTransition key={data.id} timeout={500} classNames="fade">
-              <li>
-                <article>
-                  <header>
-                    {/* Link post title to detailed post page */}
-                    <h2>
-                      <Link to={`/post/${data.id}`}>{data.title}</Link>
-                    </h2>
-                    {/* Conditionally render author name if it exists */}
-                    {data.author && <p>{data.author.name}</p>}
-                  </header>
-                  {/* Show the post summary */}
-                  <p>{data.summary}</p>
-                </article>
+              <li className="post-item">
+                <Link to={`/post/${data.id}`} className="post-link">
+                  <article className="post-card">
+                    <header>
+                      {/* Show the author on top */}
+                      {data.author && <p className="post-author">{data.author.name}</p>}
+                      {/* Show the title */}
+                      <h2 className="post-title">{data.title}</h2>
+                    </header>
+                    {/* Show the post summary in a smaller font */}
+                    <p className="post-summary">{data.summary}</p>
+                  </article>
+                </Link>
               </li>
             </CSSTransition>
           ))}

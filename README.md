@@ -28,6 +28,35 @@ In order to run the provided solution the following software will need to be ins
    - Run `yarn add react-router-dom react-transition-group node-sass` or `npm install react-router-dom react-transition-group node-sass`
 4. Run the development server using `yarn start` or `npm start`.
 
+### Using Docker
+
+You can run this project using Docker. There are two ways to do this: by using the provided Dockerfile or by pulling the image from Docker Hub.
+
+#### Option 1: Build from Dockerfile
+
+1. Navigate to the Docker directory :
+   - `cd docker`
+
+2. Build the Docker image :
+   - `docker build -t lizardglobal_assessment .`
+
+3. Run the Docker container:
+`docker run -p 8080:8080 -it --name lizardglobal_assessment lizardglobal_assessment`
+
+#### Option 2: Pull from Docker Hub
+If you prefer not to build the image yourself, you can download it directly from Docker Hub:
+
+1. Pull the image:
+   - `docker pull airg213/lizardglobal_assessment`
+
+2. Run the Docker container:
+   - `docker run -p 8080:8080 -it --name lizardglobal_assessment airg213/lizardglobal_assessment`
+
+#### Notes
+- After running the container, you can access the application at http://localhost:8080.
+
+- Make sure Docker is installed and running on your machine.
+
 ### Requirements
 
 These are the minimum requirements for the exercies:
@@ -87,10 +116,10 @@ If you have time then demonstrating any of the following would be considered as 
    - The animation enhances user experience by providing visual feedback during state transitions.
 
 4. Converted the application to use TypeScript instead of JavaScript. This involved:
-  - Renaming files from `.js` to `.tsx` where necessary.
-  - Installing TypeScript and the necessary type definitions for React and React Router.
-  - Defining interfaces for components and props to ensure type safety.
-  - Updating components to utilize the new types and handle potential undefined properties.
+   - Renaming files from `.js` to `.tsx` where necessary.
+   - Installing TypeScript and the necessary type definitions for React and React Router.
+   - Defining interfaces for components and props to ensure type safety.
+   - Updating components to utilize the new types and handle potential undefined properties.
 
 5. Implemented SCSS for styling improvements.
    - Converted all CSS files to SCSS format to leverage the features of a CSS preprocessor.
